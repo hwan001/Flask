@@ -9,7 +9,7 @@ RUN apt-get install -y libmariadb-dev libmariadbclient-dev
 COPY . /API-Server
 WORKDIR /API-Server
 
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 ENTRYPOINT ["python3"]
 CMD ["run.py"]

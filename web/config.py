@@ -1,10 +1,15 @@
 # DB, 계정, url 등 중요 정보 -> github에 공개 x
-
-#global url, db_server, db_port, db_name, db_collection
-
 url = "https://42f7-58-228-210-47.jp.ngrok.io"
-db_server = "666daeva.iptime.org"
-db_port = 27017
-dic_dbname = {'stockdb':"STOCK_RECOMM",'userdb':"user"} 
-dic_colname = {'stockcol':"TICKERS", 'usercol':"account"}
+
+mongodb_server_ip = "666daeva.iptime.org"
+mongodb_server_port = 27017
+mongodb_database_name = {'stockdb':"STOCK_RECOMM",'userdb':"user"} 
+mongobd_collection_name = {'stockcol':"TICKERS", 'usercol':"account"}
+
+mariadb_server_ip = "192.168.0.0"
+mariadb_server_port = 5001
+mariadb_user_id = ""
+mariadb_user_pw = ""
+mariadb__database_name = ""
+mariadb_table_name = ""
 

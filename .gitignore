@@ -4,4 +4,4 @@
 venv
 web/config.py
 Dockerfile
-Scrips/
+scripts/*

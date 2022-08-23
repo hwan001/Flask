@@ -1,3 +1,7 @@
+import yfinance as yf
+from datetime import *
+from datetime import timedelta
+
 # 상승장 형태에서 변화가 비교적 심한 종목일 경우 적용
 class 변화심한그래프():
     # 초기 값 지정

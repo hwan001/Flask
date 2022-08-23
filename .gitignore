@@ -3,5 +3,5 @@
 *.pyc
 venv
 web/config.py
-Dockerfile
-scripts/*
+#Dockerfile
+#scripts/*

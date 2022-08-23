@@ -11,6 +11,6 @@ mariadb_server_ip = "192.168.0.0"
 mariadb_server_port = 5001
 mariadb_user_id = ""
 mariadb_user_pw = ""
-mariadb__database_name = ""
+mariadb_database_name = ""
 mariadb_table_name = ""
 

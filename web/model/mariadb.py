@@ -1,5 +1,5 @@
 import mariadb
-import config
+from web import config
 import sys
 
 # MariaDB 연결
@@ -9,7 +9,7 @@ try:
         password=config.mariadb_user_pw,
         host=config.mariadb_server_ip,
         port=config.mariadb_server_port,
-        database=config.mariadb__database_name
+        database=config.mariadb_database_name
     )
 except mariadb.Error as e:
     print(f"Error connecting to MariaDB Platform: {e}")

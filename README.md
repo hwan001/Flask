@@ -1,3 +1,4 @@
-# API-Server
+## API-Server
+>  1. fastapi, flask를 활용한 Rest api 서버(또는 gw) 만들기
+>  2. 웹페이지 작성
 
-fast api를 활용한 API G/W 만들기

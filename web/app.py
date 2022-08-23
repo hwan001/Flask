@@ -13,7 +13,7 @@ class Services:
     pass
 
 def create_app(test_config = None):
-    print("url : ", config.url)
+    #print("url : ", config.url)
     
     app.debug = False
 

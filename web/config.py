@@ -1,4 +1,5 @@
 # DB, 계정, url 등 중요 정보 -> github에 공개 x
+
 url = "https://42f7-58-228-210-47.jp.ngrok.io"
 
 mongodb_server_ip = "666daeva.iptime.org"

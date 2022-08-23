@@ -2,7 +2,6 @@
 */__pycache__
 *.pyc
 venv
-test
-out.txt
-stock/stock_price_data/*
 web/config.py
+Dockerfile
+Scrips/

@@ -9,8 +9,8 @@ mongobd_collection_name = {'stockcol':"TICKERS", 'usercol':"account"}
 
 mariadb_server_ip = "192.168.0.0"
 mariadb_server_port = 5001
-mariadb_user_id = ""
-mariadb_user_pw = ""
-mariadb_database_name = ""
-mariadb_table_name = ""
+mariadb_user_id = "hwan001"
+mariadb_user_pw = "1234"
+mariadb_database_name = ["user", "data"]
+mariadb_table_name = {"user":["id","pw","",""], "data":["ticker", "quantity", "value"]}
 

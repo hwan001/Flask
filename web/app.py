@@ -46,7 +46,6 @@ from flask import Flask
 from flask import request, render_template, make_response, jsonify, session, redirect, url_for
 import yfinance as yf
 
-
 conn = connect_conn(config.db_server, config.db_port)
 col_stock = connect_col(config.db_server, config.db_port, config.dic_dbname['stockdb'], config.dic_colname['stockcol'])
 col_user = connect_col(config.db_server, config.db_port, config.dic_dbname['userdb'], config.dic_colname['usercol'])

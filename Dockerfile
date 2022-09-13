@@ -1,5 +1,5 @@
-FROM hwan001/pluto:0.2
-MAINTAINER hwan001 "woghks7209@gmail.com"
+FROM ubuntu:latest
+#MAINTAINER hwan001 "woghks7209@gmail.com"
 
 RUN apt-get update
 RUN apt-get install -y vim net-tools

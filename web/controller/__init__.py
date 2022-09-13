@@ -1,3 +1,1 @@
-from .simulation import *
-from .stock import *
-
+from web import config

@@ -14,3 +14,4 @@ mariadb_user_pw = "1234"
 mariadb_database_name = ["user", "data"]
 mariadb_table_name = {"user":["id","pw","",""], "data":["ticker", "quantity", "value"]}
 
+secret_key = "@!hwan_%_hwan!@"

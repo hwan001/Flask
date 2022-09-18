@@ -1,24 +1,22 @@
 from distutils.debug import DEBUG
+from re import A
 import sys
 import subprocess
 from unittest import result
 
 try:
-    from flask_jwt_extended import *
-
+    from flask import Flask
+    from flask import request, render_template, make_response, jsonify, session, redirect, url_for, Response
+    from flask_jwt_extended import jwt_required, get_jwt_identity, create_access_token, JWTManager
 
 except:
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade', 'pip'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-r', 'requirements.txt'])
-    
-    from flask_jwt_extended import *
+
 
 
 #from web.model.mongodb import *
-#from datetime import datetime
-
-from flask import Flask
-from flask import request, render_template, make_response, jsonify, session, redirect, url_for
+from datetime import datetime, timedelta
 
 from web import config
 
@@ -28,11 +26,11 @@ from web import config
 
 app = Flask(__name__)
 app.config.update(DEBUG=True, JWT_SECRET_KEY = config.secret_key)
+app.config['JWT_SECRET_KEY'] = config.flaskJwt_secret_key
+app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(hours=1) # default : 15분
+#app.config['JWT_REFRESH_TOKEN_EXPIRES'] = config.flaskJwt_refresh # default : 30일
 
 jwt = JWTManager(app)
-
-class Services:
-    pass
 
 def create_app(test_config = None):
     app.debug = False
@@ -48,6 +46,7 @@ def main():
 @app.route("/login", methods=['POST'])
 def login():
     input_data = request.get_json()
+    
     user_name = input_data['id']
     user_pw = input_data['pw']
 
@@ -62,3 +61,13 @@ def login():
         return jsonify(
             result = "Invalid Params"
         )
+        
+        
+@app.route("/my_jwt_test", methods=['GET'])
+@jwt_required()
+def my_jwt_test():
+    current_user = get_jwt_identity() 
+    
+    return jsonify(logged_in_as=current_user), 200
+
+

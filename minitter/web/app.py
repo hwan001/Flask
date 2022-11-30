@@ -59,7 +59,7 @@ def follow():
     user.setdefault('follow', set()).add(user_id_to_follow)
 
     return jsonify(user)
-
+1
 @app.route("/unfollow", methods=['POST'])
 def unfollow():
     payload = request.json
